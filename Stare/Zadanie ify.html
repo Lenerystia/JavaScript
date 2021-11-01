@@ -1,0 +1,47 @@
+<! doctype html>
+<html>
+    <head>
+		<title>Instrukcje warunkowe - if</title>
+		<!--Napisz program, który:
+		- wczyta cztery liczby, pierwszą i trzecią doda, drugą i czwartą pomnoży
+		- Sprawdzi czy suma wyników, jest liczbą parzystą, jeśli nie - dodać jeden, w przeciwnym wypadku podzielić przez dwa
+		- sprawdzić który wynik jest większy i wyświetlić odpowiedni komunikat,
+		- na każdym wyniku dokonać inkrementacji i w zależności od tego czy pierwszy wynik będzie większy od drugiego podzielić na 2 lub odjąć 4-->
+	</head>
+	<body>
+		<script type="text/javascript">
+		var x = parseInt(prompt("Podaj liczbę"))
+		var y = parseInt(prompt("Podaj liczbę"))
+		var z = parseInt(prompt("Podaj liczbę"))
+		var v = parseInt(prompt("Podaj liczbę"))
+		wynik1 = x+z
+			//document.write(wynik1 + "<br>")
+		wynik2 = y*v
+			//document.write(wynik2 + "<br>")
+		suma = wynik1+wynik2
+		if (suma%2 == 0){
+			suma/=2 
+			document.write(suma + "<br>")
+		} else if (suma%2!=0){
+			suma++
+			document.write(suma + "<br>")
+		}
+		if (wynik1>wynik2){
+			document.write("Wynik pierwszy jest większy od drugiego <br>")
+		} else {
+			document.write("Wynik drugi jest większy od pierwszego <br>")
+		}
+		wynik1++
+		wynik2++
+		if (wynik1>wynik2){
+			wynik1/=2
+			document.write(wynik1 + "<br>")
+		} else {
+			wynik2-=4
+			document.write(wynik2 + "<br>")
+		}
+		
+		</script>
+	 </body>
+</html>
+

@@ -1,0 +1,30 @@
+<! doctype html>
+<html>
+    <head>
+		<title>Instrukcje warunkowe - switch 2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var liczba1 = prompt("Wprowadź pierwszą liczbę")
+			var liczba2 = prompt("Wprowadź drugą liczbę")
+			var wybor = prompt("wybór działania \n+ dodawanie, \n- odejmowanie, \n* mnożenie, \n/ dzielenie")
+			switch(wybor){
+				case '+':
+					document.write(liczba1+liczba2)
+				break
+				case '-':
+					document.write(liczba1-liczba2)
+				break
+				case '*':
+					document.write(liczba1*liczba2)
+				break
+				case '/':
+					document.write(liczba1/liczba2)
+				break
+				default:
+					document.write("zły wybór działania")
+				break
+			}
+		</script>
+	 </body>
+</html>

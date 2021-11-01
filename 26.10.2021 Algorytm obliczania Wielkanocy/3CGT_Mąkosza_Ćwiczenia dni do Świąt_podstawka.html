@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var rok = prompt("podaj rok z przedziału 1900-2099")
+        if (rok>=1900 && rok<=2099){
+            var p = 24
+            var q = 5
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            }
+        } else{
+            document.write("No lipa. Nie prawidłowy zakres liczb")
+        }
+    </script>
+</body>
+</html>

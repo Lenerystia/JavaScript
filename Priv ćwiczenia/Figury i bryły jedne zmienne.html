@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3CGT Mąkosza Marlena - Figury i bryły</title>
+</head>
+<body style="text-align: center;">
+    <script>
+		PI = Math.PI
+		var a = prompt("Podaj wymiar boku podstawy - a: ")
+		var b = prompt("Podaj wymiar drugiego boku - b: ")
+		var c = prompt("Podaj wymiar boku drugiej podstawy/górnej krawędzi - c: ")
+		var d = prompt("Podaj wymiar kolejnego boku - d: ")
+		var h = prompt("Podaj wysokość - h lub wysokość trójąta bocznego a: ")
+		var h_2 = prompt("Podaj wysokośc trójkąta bocznego b: ")
+		var r = prompt("Podaj promień - r: ")
+		var s = prompt("Podaj wymiar krawędzi bocznej: ")
+		var H = prompt("Podaj wysokośc bryły: ")
+		var wybor = prompt("Figury czy bryły?\n1 - figury\n2 - bryły")
+			switch(wybor){
+					//jeśli figura to jaka, wybierz
+				case '1':
+					var figura = prompt("Wybierz figurę, którą potrzebujesz\n1 - kwadrat\n2 - prostokąt\n3 - trapez\n4 - równoległobok\n5 - trójkąt\n6 - koło")
+					switch(figura){
+						case '1':
+							//kwadrat
+							var pole = Math.pow(a, 2)
+							var obwod = a * 4
+							document.write("Pole <b>kwadratu</b>, o boku " + a + ", wynosi: " + pole + "<br>")
+							document.write("A obwód wynosi: " + obwod + "<br><br>")
+							break;
+							case '2':
+							//prostokąt
+							var pole1 = a * b
+							var obwod1 = 2 * (a + b)
+							document.write("Pole <b>prostokąta</b>, o bokach " + a + " i " + b + ", wynosi: " + pole1 + "<br>") 
+							document.write("A obwód wynosi: " + obwod1 + "<br><br>")
+							break;
+							case '3':
+							//trapez
+							var pole2 = ((a + c)*h)/2
+							var obwod2 = a + b + c + d
+							document.write("Pole <b>trapezu</b>, o bokach " + a + ", " + b + ", " + c + ", " + d + " i wysokości " + h + ", wynosi: " + pole2 + "<br>") 
+							document.write("A obwód wynosi: " + obwod2 + "<br><br>")
+							break;
+							case '4':
+							//równoległobok
+							var pole3 = a * h
+							var obwod3 = 2 * (a + b)
+							document.write("Pole <b>równoległoboku</b>, o bokach " + a + " i " + b + " i wysokości " + h + ", wynosi: " + pole3 + "<br>") 
+							document.write("A obwód wynosi: " + obwod3 + "<br><br>")
+							break;
+							case '5':
+							//trójkąt
+							var pole4 = (a * h)/2
+							var obwod4 = a + b + c
+							document.write("Pole <b>trójkąta</b>, o bokach " + a + ", " + b + " i " + c + " i wysokości " + h + ", wynosi: " + pole4 + "<br>") 
+							document.write("A obwód wynosi: " + obwod4 + "<br><br>")
+							break;
+							case '6':
+							//koło
+							var pole5 = PI * Math.pow(r, 2)
+							var pole5round = Math.round(pole5 * 100) / 100
+							var obwod5 = 2 * (PI * r)
+							var obwod5round = Math.round(obwod5 * 100) / 100
+							document.write("Pole <b>koła</b>, o promieniu " + r + ", w zaokrągleniu wynosi: " + pole5round + "<br>") 
+							document.write("A obwód w zaokrągleniu wynosi: " + obwod5round + "<br><br>") 
+							default:
+							document.write("Nieodpowiedni format wyboru")	
+					}
+				break;
+				//jeśli bryła, wybierz jaka
+				case '2':
+					var bryla = prompt("Wybierz bryłę, którą potrzebujesz\n1 - sześciokąt\n2 - prostopadłościan\n3 - ostrosłup\n4 - stożek\n5 - walec\n6 - kula")
+					switch(bryla){
+							case '1':
+							//sześciokąt
+							var pole6 = 6 * Math.pow(a, 2)
+							var objetosc6 = Math.pow(a, 3)
+							var obwod6 = a * 12
+							document.write("Pole <b>sześciokątu</b>, o długości krawędzi " + a + ", wynosi: " + pole6 + "<br>")
+							document.write("Objętość wynosi: " + objetosc6 + "<br>") 
+							document.write("A obwód wynosi: " + obwod6 + "<br><br>")
+							break;
+							case '2':
+							//prostopadłościan
+							var pole7 = 2 * ((a*b)+(a*c)+(b*c))
+							var objetosc7 = a * b * c
+							var obwod7 = 4 * (a+b+c)
+							document.write("Pole <b>prostopadłościanu</b>, o długościach krawędzi " + a + ", " + b + " i " + c + ", wynosi: " + pole7 + "<br>")
+							document.write("Objętość wynosi: " + objetosc7 + "<br>") 
+							document.write("A obwód wynosi: " + obwod7 + "<br><br>")
+							break;
+							case '3':
+							//ostrosłup
+							var poleboczne8 = 2 * ((a*h) + (b*h_2))
+							var polepodstawy8 = a * b
+							var pole8 =  polepodstawy8 + poleboczne8
+							var objetosc8 = (polepodstawy8 * H) / 3
+							var obwod8 = 4 * s + 2 * (a + b)
+							document.write("Pole <b>ostrosłupa</b>, o  długościach krawędzi podstawy " + a + ", " + b + ", długości krawędzi bocznej " + s + ", wysokościach boku " + h + " oraz " + h_2 + " i wysokości bryły " + H + ", wynosi: " + pole8 + "<br>")
+							document.write("Objętość wynosi: " + objetosc8 + "<br>") 
+							document.write("A obwód wynosi: " + obwod8 + "<br><br>")
+							break;
+							case '4':
+							//stożek
+							var poleboczne9 = PI * r * s
+							var polepodstawy9 = PI * Math.pow(r, 2)
+							var pole9 = poleboczne9 + polepodstawy9
+							var pole9round = Math.round(pole9 * 100) / 100
+							var objetosc9 = (PI * Math.pow(r, 2) * h) / 3
+							var objetosc9round = Math.round(objetosc9 * 100) / 100
+							var obwod9 = 2 * (PI*r + s)
+							var obwod9round = Math.round(obwod9 * 100) / 100
+							document.write("Pole <b>stożka</b>, o promieniu " + r + ", wysokości bryły " + h + " i długości krawędzi bocznej " + s + ", wynosi: " + pole9round + "<br>")
+							document.write("Objętość w zaokrągleniu wynosi: " + objetosc9round + "<br>") 
+							document.write("A obwód w zaokrągleniu wynosi: " + obwod9round + "<br><br>")
+							break;
+							case '5':
+							//walec
+							var poleboczne10 = 2 * (PI * r * h)
+							var polepodstawy10 = PI * Math.pow(r, 2)
+							var pole10 = poleboczne10 + (2 * polepodstawy10)
+							var pole10round = Math.round(pole10 * 100) / 100
+							var objetosc10 = PI * Math.pow(r, 2) * h
+							var objetosc10round = Math.round(objetosc10 * 100) / 100
+							var obwod10 = (4 * (PI * r)) + (2 * h)
+							var obwod10round = Math.round(obwod10 * 100) / 100
+							document.write("Pole <b>walca</b>, o promieniu " + r + " i wysokości bryły " + h + ", wynosi: " + pole10round + "<br>")
+							document.write("Objętość w zaokrągleniu wynosi: " + objetosc10round + "<br>") 
+							document.write("A obwód w zaokrągleniu wynosi: " + obwod10round + "<br><br>")
+							break;
+							case '6':
+							//kula
+							var r11 = prompt("Podaj promień: ")
+							var pole11 = 4 * (PI * Math.pow(r, 2))
+							var pole11round = Math.round(pole11 * 100) / 100
+							var objetosc11 = (4 * (PI * Math.pow(r, 3))) / 3
+							var objetosc11round = Math.round(objetosc11 * 100) / 100
+							var obwod11 = 2 * (PI * r)
+							var obwod11round = Math.round(obwod11 * 100) / 100
+							document.write("Pole <b>kuli</b>, o promieniu " + r + ", w zaokrągleniu wynosi: " + pole11round + "<br>") 
+							document.write("Objętość w zaokrągleniu wynosi: " + objetosc11round + "<br>")
+							document.write("A obwód w zaokrągleniu wynosi: " + obwod11round + "<br><br>")
+							break;
+							default:
+							document.write("Nieodpowiedni format wyboru")		
+					}
+				break;
+				default:
+					document.write("Nieodpowiedni format wyboru")
+			}	
+	</script>
+</body>
+</html>

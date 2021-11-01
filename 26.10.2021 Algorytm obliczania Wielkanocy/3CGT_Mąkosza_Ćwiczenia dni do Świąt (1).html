@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+		var zakres = prompt("Wybierz zakres lat \n1 - od 1900 do 2099 \n2 - od 2100 do 2199 \n3 - od 1800 do 1899 \n4 - od 1700 do 1799")
+        var rok = prompt("Podaj rok") 
+		 switch (zakres){
+			case '1':
+            var p = 24
+            var q = 5
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            }
+        break;
+
+		case '2':
+            var p = 24
+            var q = 6
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            }
+		break;
+		case '3':
+			var p = 23
+            var q = 4
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		break;
+		case '4':
+			var p = 23
+            var q = 3
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		break;
+		}
+		
+		
+		
+		/*
+       
+		
+		else if (rok>=1700 && rok<=1799){
+			var p = 23
+            var q = 3
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		} else if (rok>=1583 && rok<=1699){
+			var p = 22
+            var q = 2
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		} else if (rok<=1582){
+			var p = 15
+            var q = 6
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia, gdzie toć to nie może być
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                //jeśli kilka dni i wypadnie w marcu
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    //odejmie 9 dni, które zostały do końca marca i zacznie liczyć na kwiecień
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		} else{
+           document.write("No lipa. Nie prawidłowy zakres liczb")
+		}*/
+    </script>
+</body>
+</html>

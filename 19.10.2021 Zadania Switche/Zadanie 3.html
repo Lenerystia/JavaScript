@@ -1,0 +1,29 @@
+<! doctype html>
+<html>
+    <head>
+		<title>Instrukcje warunkowe - switch 3</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			wybor = prompt("Polę której figury chcesz liczyć? (kwadrat, trójkąt czy koło)")
+			switch(wybor){
+				case 'kwadrat':
+					a = prompt("Podaj długość boku")
+					document.write(a*a)
+				break
+				case 'trójkąt':
+					a = prompt("Podaj długość boku")
+					h = prompt("Podaj wysokość")
+					document.write((a*h)/2)
+				break
+				case 'koło':
+					r = prompt("Podaj długość promienia")
+					document.write(Math.PI*(r*r))
+				break
+				default:
+					document.write("Niewłaściwy nr figury")
+				break
+			}
+		</script>
+	 </body>
+</html>

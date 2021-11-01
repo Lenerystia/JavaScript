@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<head>
+    <title>3CGT Mąkosza - Liczenie dni do Wielkanocy</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var rok = prompt("Podaj rok do 2199")
+        if (rok>=2100 && rok<=2199){
+            var zakres = '1'
+        } else if (rok>=1900 && rok<=2099){
+            var zakres = '2'
+        } else if (rok>=1800 && rok<=1899){
+            var zakres = '3'
+        } else if (rok>=1700 && rok<=1799){
+            var zakres = '4'
+        } else if (rok>=1583 && rok<=1699){
+            var zakres = '5'
+        } else if (rok<=1582){
+            var zakres = '6'
+        }
+
+		switch (zakres){
+		case '1':
+            var p = 24
+            var q = 6
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            }
+		break;
+		case '2':
+            var p = 24
+            var q = 5
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+                //powyżej tej wartości, zejdzie za 25 kwietnia i trzeba przesunąć o tydzień do tyłu
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    //jeśli przekroczy tę wartość, wskaże Wielkanoc na kwiecień
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else
+                    {//jeśli nie, to wskaże święto na marzec
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            }
+        break;
+		case '3':
+			var p = 23
+            var q = 4
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		break;
+		case '4':
+			var p = 23
+            var q = 3
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+		break;
+        case '5':
+            var p = 22
+            var q = 2
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+        break;
+        case '6':
+            var p = 15
+            var q = 6
+            var a = rok%19
+            var b = rok%4
+            var c = rok%7
+            var d = (19*a+p)%30
+            var e = (2*b+4*c+6*d+q)%7
+            var dnido = d+e
+            if (dnido>=34){
+               dnido = dnido-7
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+            } else{
+                document.write("Wielkanoc w "+ rok + " roku będzie za "+ dnido + " dni od 22 marca. <br>")
+                var dnimar = 22 + dnido
+                if (dnimar>31){
+                    var dnikw = dnido-9
+                    document.write("Czyli "+ dnikw + " kwietnia.")
+                } else{
+                    document.write("Czyli "+ dnimar + " marca.")
+                }
+			}
+            
+        break;
+        default:
+           document.write("Błąd")
+        break;
+		}
+    </script>
+</body>
+</html>
