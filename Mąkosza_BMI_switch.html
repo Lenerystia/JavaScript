@@ -1,0 +1,36 @@
+<html>
+	<head>
+	<meta charset="UTF-8">
+	</head>
+	<body>
+		<script>
+			var masa = prompt("podaj masę ciała")
+			var wzrost = prompt("podaj swój wzrost")
+			var BMI = masa/(wzrost*wzrost)
+			BMI = BMI * 10000
+			document.write(BMI + "<br>")
+            switch(true){
+            case (BMI < 16):
+                document.write("Wygłodzenie");
+            break;
+            case (BMI < 17):
+                document.write("Wychudzenie");
+            break;
+            case (BMI < 18.5):
+                document.write("Niedowaga");
+                break;
+            case (BMI > 18.5) && (BMI < 24.9):
+                document.write("Prawidłowe BMI");
+                break;
+            case (BMI > 25) && (BMI < 29.9):
+                document.write("Nadwaga");
+                break;
+            case (BMI > 30):
+                document.write("Otyłość");
+                break;
+            default:
+                document.write("podaj poprawne dane");
+            }
+		</script>
+	</body>
+</html>
